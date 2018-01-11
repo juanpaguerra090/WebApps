@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>First Task</title>
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112345450-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112345450-1');
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    
+      <script> 
+        $(document).ready(function(){
+            $("#flip2").click(function(){
+                $("#panel2").slideToggle("slow");
+            });
+        });
+    </script>
+
+    <style> 
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+        }
+
+        #panel {
+            padding: 10px;
+            display: none;
+        }
+        
+         #panel2, #flip2 {
+            padding: 5px;
+            text-align: center;
+        }
+
+        #panel2 {
+            padding: 10px;
+            display: none;
+        }
+    </style>
+    
+    <body>
+
+     <header>
+        <div class="container">
+            <h1 class="logo"></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="MC.html">Miguel</a></li>
+                <li><a href="JP.html">Juan Pablo</a></li>
+                <li><a href="FD.html">Frida</a></li>
+                <li><a href="SR.html">Sara</a></li>
+            </ul>
+        </nav>
+        
+        </div>
+         
+         
+        </header>
+        
+        <br>
+        <br>
+        
+        <h1 align="center"><font color="white">Idea For The Project</font></h1>
+        <h4 align="center"><font color="white">Full Meal Subscription Boxes</font></h4>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div id="flip"><h1><font color="white">Introduction</font></h1></div>
+        <div id="panel">
+            <h3><font color="white">Ever wanted to cook but never wanted go out and buy all the ingredients necessary? <br> 
+                If that’s the case then you definitely need to subscirbe to a full meal box.</font></h3>
+        </div>
+        
+        <br>
+        
+        <div id="flip2"><h1><font color="white">Description</font></h1></div>
+        <div id="panel2">
+            <h3><font color="white">Instead of having to spend all that time at the grocery stores trying to buy ingredients, <br>
+                you can finally have them all delivered straight to your door and prepare your own meals. <br>
+                ¡COOK AMAZING MEALS FROM SCRATCH!</font></h3>
+        </div>
+        
+    </body>
+</html>
