@@ -1,19 +1,31 @@
 body {
-    background-color: #9AC0BA;
+	background: #0091ea;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(-45deg, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(-45deg, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #f7f7f7;
+}
+html {
+    height: 100%;
 }
 
 h1 {
     color: white;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 70px;
     text-align: left;
 	margin-left: 10%;
+	margin-bottom: .5%;
+	
 }
 
 h2{
 	color: whitesmoke;
 	font-family: 'Roboto', sans-serif;
 	text-align: left;
-	margin-left: 5%;
+	margin-left: 10%;
+	margin-top: .5%;
+	
+
 }
 
 p {
@@ -21,13 +33,7 @@ p {
 	font-size: 18px;
     margin-right: 20%;
     margin-left: 10%;
-}
 
-p {
-	font-family: 'PT Sans', sans-serif;
-	font-size: 18px;
-    margin-right: 20%;
-    margin-left: 10%;
 }
 p[att^=str]{
 	font-family: 'PT Sans', sans-serif;
@@ -41,6 +47,85 @@ p[att^=str]{
 	padding: .5%;
 }
 
-.hide-button {
-  padding-left: 15px;
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 20vh;
 }
+
+.button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Signika Negative', sans-serif;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.button:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+}
+.button:nth-of-type(5):after {
+  height: 120%;
+  left: -10%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  z-index: -1;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover:after {
+  width: 100%;
+  left: 0;
+}
+.button:hover:nth-of-type(5) {
+  color: #5bcaff;
+}
+.button:hover:nth-of-type(5):after {
+  left: -10%;
+  width: 120%;
+}
+
+.button a{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/*
+font-family: 'Signika Negative', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Sans Caption', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
