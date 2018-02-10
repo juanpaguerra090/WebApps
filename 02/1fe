@@ -1,0 +1,41 @@
+(define big-number 10500900)
+(define small-number 0.00000025)
+(define animal 'cat)
+(define number1 big-number)
+(define number2 'big-number)
+
+big-number
+small-number
+'big-number
+animal
+'animal <==>OR (quote animal)
+number1
+number2
+'number1
+
+
+
+
+
+(define (suma)
+	(+ 1 1)
+	(- 1 1)
+)
+
+
+//SIN PARAMETROS
+(define (suma)
+	(+ (+ 1 1)
+	(- 1 1))
+)
+// (+ 1 1) + (- 1 1)
+
+(define (area) 
+    (/ (* (+ B b) h)2)
+)
+
+(if (< 1 2) 'V (quote F))
+
+(define (ejercicio a b)
+	(if (< a b) b a)
+)

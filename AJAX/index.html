@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>AJAX</title>
+	</head>  
+	
+	<body>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			function doSomething() {
+				results = $.get("/AJAX/main.php");
+				console.log(results);
+			}
+		</script>
+		
+		<script>
+			$(document).ready( () => {	
+				var currentJSON = null;
+				function auto_load(){
+					$.ajax({
+					url: "/AJAX/main.php",
+					dataType: "json",
+					complete: (result, status) => {
+						//console.log("Result: ", result);
+						myJson = result.responseJSON;
+						currentJSON = myJson;
+						var txt = "";
+						txt += "<table border='1'>"
+						for (x in myJson) {
+							txt += "<tr><td>" + myJson[x].LOCAL + "</td><td>" + myJson[x].LOCAL_SCORE + "</td><td>" +
+									myJson[x].VISITOR + "</td><td>" + myJson[x].VISITOR_SCORE +	"</td></tr>";
+						}
+						txt += "</table>";    
+						document.getElementById("hello").innerHTML = txt;	
+						console.log("TABLE UPDATED");
+					},
+					error: (jqXHR, status, error) => {
+						console.log("jqXHR: ", jqXHR);
+						console.log("status: ", status);
+						console.log("error: ", error);
+					}
+				});	
+				}
+				auto_load();
+				setInterval(auto_load, 1000);
+			});
+		</script>
+					<div id= "hello"></div>
+	</body>
+</html>

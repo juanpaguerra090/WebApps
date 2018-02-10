@@ -1,0 +1,46 @@
+body {
+    background-color: #9AC0BA;
+}
+
+h1 {
+    color: white;
+	font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+	margin-left: 10%;
+}
+
+h2{
+	color: whitesmoke;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	margin-left: 5%;
+}
+
+p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+p[att^=str]{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+.material-icons{
+	vertical-align: middle;
+	padding: .5%;
+}
+
+.hide-button {
+  padding-left: 15px;
+}
